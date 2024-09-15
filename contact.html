@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<body>
+    <section class="contact">       
+         <div class="container">
+            <h2>contact us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>send us a message:</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="address" name="adress" placeholder="your address">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message"  placeholder="your message"></textarea>
+                        </div>
+                        <button type="button" onclick="fun(event)">send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function fun(event){
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+            var message = document.getElementById("message").value;
+             if( name === '' || address === '' || message === '' ){
+                alert("Please fill the form")
+             }
+             else{
+                alert("Form submitted successfully!")
+             }
+
+
+
+
+
+
+        }
+       
+    </script>
+</body>
+</html>

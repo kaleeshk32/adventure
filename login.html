@@ -1,0 +1,67 @@
+<head>
+    <title>Login</title>
+</head>
+<style>
+    .login {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <div class="container" >
+
+        <div>
+          <div style="background-image: url(cliff-1822484_640.jpg);height: 100vh;background-size: cover;background-repeat: no-repeat;">
+            <div class="login">
+                
+        
+                <div>
+                    
+                    <form style="display: block; text-align: center; border: 10px solid gray; border-radius: 13px; height: 300px; background-color: blur;">
+                        <h1 style="color:white;">LOGIN</h1>
+                        <div style="margin: 30px; border: 50px;">
+                            <input id="username" placeholder="email" type="" />
+                        <div style="margin: 30px; border: 50px;">
+                            <input id="password" placeholder="password" type="password" />
+                        </div>
+                        <div style="text-align: center; font-size: 30px;">
+                            <button type="button" id ="login-btn" onclick="fun()">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        function fun(){
+            var email = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+              if( email !== 'kaleeshk32@gmail.com'){
+                alert("please enter valid email")
+             }
+             else if(pass !=='12345'){
+                alert("please enter valid pass")
+            }
+            else if( email === 'kaleeshk32@gmail.com' && pass=='12345' ){
+                 // alert("login successfully")
+                window.location.assign("adventure.html")
+             }
+            
+    }    
+             
+
+
+
+
+
+
+        
+       
+    </script>
+</body>

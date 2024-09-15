@@ -1,0 +1,99 @@
+<!--Font Awesome CDN-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="adventure.css">
+
+
+<div class="container">
+    
+    <div class="slide">
+         
+        <div class="mode-toggle"  onclick="toggleMode()">
+            <button><i class='fa-solid fa-sun' id="mode-icon"></i></button>
+            </div>
+        
+        <div class="item" style="background-image: url(rafting.jpg);">
+            <div class="content">
+                <div class="name">RAFTING</div>
+                <div class="des">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                     Similique quo quidem eligendi nesciunt voluptatum ea id laudantium, maiores quam.
+                      Inventore quam pariatur voluptatum quia eos nemo,
+                     harum sit exercitationem rem!</div>
+                <button>See More</button>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url(bunglee_jump.webp);">
+            <div class="content">
+                <div class="name">BUNGEE JUMPING</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url(hot-air-balloon.jpg);">
+            <div class="content">
+                <div class="name">Hot Air Baloon</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url(trekking.jpg);">
+            <div class="content">
+                <div class="name">Trekking</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(sky_diving.jpg);">
+            <div class="content">
+                <div class="name">Sky Diving</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(caving.jpg);">
+            <div class="content">
+                <div class="name">Caving</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <script>
+        let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+
+
+function toggleMode() {
+            var body = document.body;
+            var modeIcon = document.getElementById("mode-icon");
+
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
+                modeIcon.classList.replace("fa-sun", "fa-moon");
+            } else {
+                modeIcon.classList.replace("fa-moon", "fa-sun");
+            }
+        }
+    </script>
+</div>

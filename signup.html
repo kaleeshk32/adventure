@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div id="signupPage" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <form action="#" method="post" class="signup-form" onsubmit="return validateSignUpForm()">
+                <h2>Sign Up</h2>
+                
+                <div class="input-container">
+                    <i class='bx bx-user'></i>
+                    <input type="text" id="signupUsername" name="username" placeholder="Username" required>
+                </div>
+                
+                <div class="input-container">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" id="signupEmail" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-container">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" id="signupPassword" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-container">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" id="signupConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                
+                <button type="submit" class="signup-button">Sign Up</button>
+                <p id="signupErrorMessage" class="error-message"></p>
+            </form>
+    
+        </div>
+    </div>
+    <script>
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('signupPage').style.display = 'none';
+});
+
+document.getElementById('backButton').addEventListener('click', function() {
+    document.getElementById('signupPage').style.display = 'none';
+});
+
+function go(){
+    debugger;
+    var username = document.querySelector("#signupUsername").value;
+    var email = document.querySelector("#signupEmail").value;
+    var password = document.querySelector("#signupPassword").value;
+    var confirmPassword = document.querySelector("#signupConfirmPassword").value;
+    var errorMessage = document.getElementById("#signupErrorMessage").value;
+
+    
+    if(username == ""){
+        alert("username is empty");
+    }else if(email == ""){
+        alert("email is empty");
+    }else if(Password == ""){
+        alert("password is empty");
+    }else if(confirmPassword == ""){
+        alert("confirmpassword is empty");
+    }else{
+        alert("message send successfully");
+    }
+    window.location.assign("signup.html")
+}
+</script>
+</body>
+</html>

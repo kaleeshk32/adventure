@@ -1,0 +1,113 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background:url(cliff-1822484_640.jpg);
+    background-size: cover;
+}
+
+/* Popup styling */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+/* Popup content styling */
+.popup-content {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form title styling */
+.signup-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input container styling */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Icon styling inside input container */
+.input-container i {
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    color: #999;
+}
+
+/* Input field styling */
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Input field focus styling */
+.input-container input:focus {
+    border-color: #333;
+}
+
+/* Sign-up button styling */
+.signup-button {
+    width: 100%;
+    padding: 10px;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Sign-up button hover effect */
+.signup-button:hover {
+    background-color: #45a049;
+}
+
+/* Back button styling */
+.back-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Back button hover effect */
+.back-button:hover {
+    background-color: #e53935;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
